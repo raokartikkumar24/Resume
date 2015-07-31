@@ -16,16 +16,17 @@
 \RequirePackage{xcolor}
 
 \definecolor{white}{RGB}{255,255,255}
+\definecolor{black}{RGB}{0,0,0}
 
-\definecolor{darkgray}{HTML}{333333}
+\definecolor{darkgray}{HTML}{4D4D4D}
 \definecolor{gray}{HTML}{4D4D4D}
-\definecolor{lightgray}{HTML}{999999}
+\definecolor{lightgray}{HTML}{4D4D4D}
 
-\definecolor{green}{HTML}{C2E15F}
-\definecolor{orange}{HTML}{FDA333}
-\definecolor{purple}{HTML}{D3A4F9}
-\definecolor{red}{HTML}{FB4485}
-\definecolor{blue}{HTML}{6CE0F1}
+\definecolor{green}{HTML}{4D4D4D}
+\definecolor{orange}{HTML}{4D4D4D}
+\definecolor{purple}{HTML}{4D4D4D}
+\definecolor{red}{HTML}{4D4D4D}
+\definecolor{blue}{HTML}{4D4D4D}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -36,11 +37,11 @@
   \colorlet{fillheader}{white}
   \colorlet{header}{gray}
 \else
-  \colorlet{fillheader}{gray}
+  \colorlet{fillheader}{lightgray}
   \colorlet{header}{white}
 \fi
-\colorlet{textcolor}{gray}
-\colorlet{headercolor}{gray}
+\colorlet{textcolor}{black}
+\colorlet{headercolor}{black}
 
 %%%%%%%%%
 % Fonts %
@@ -95,7 +96,7 @@
 \newcounter{colorCounter}
 \def\@sectioncolor#1#2#3{%
   {%
-    \color{%
+   \color{%
       \ifcase\value{colorCounter}%
         blue\or%
         red\or%
@@ -156,14 +157,14 @@
 \newenvironment{aside}{%
   \let\oldsection\section
   \renewcommand{\section}[1]{
-    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
+    \par\vspace{\baselineskip}{\Large\headingfont ##1}
   }
-  \begin{textblock}{3.6}(1.5, 4.33)
-  \begin{flushright}
+  \begin{textblock}{4.3}(1.5, 4.33)
+  \begin{flushleft}
   \obeycr
 }{%
   \restorecr
-  \end{flushright}
+  \end{flushleft}
   \end{textblock}
   \let\section\oldsection
 }
