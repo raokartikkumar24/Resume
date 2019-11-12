@@ -57,7 +57,12 @@
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[Mapping=tex-text, Color=textcolor]{Arial}
 
-\setmathfont{XITS Math}
+%\setmathfont{XITS Math}
+
+\setmathfont{XITSMath-Regular}
+[    Extension = .otf,
+BoldFont = XITSMath-Bold,
+]
 
 %%%%%%%%%%
 % Header %
@@ -258,7 +263,7 @@
 
 \DeclareNameFormat{author}{%
   \small\addfontfeature{Color=lightgray}%
-  \ifblank{#3}{}{#3\space}#1%
+ % \ifblank{#3}{}{#3\space}#1%
   \ifthenelse{\value{listcount}<\value{liststop}}
     {\addcomma\space}
     {}%
