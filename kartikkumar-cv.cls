@@ -50,9 +50,9 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage{unicode-math}
 
-\newfontfamily\bodyfont[]{Arial}
-\newfontfamily\thinfont[]{Arial}
-\newfontfamily\headingfont[]{Arial}
+\newfontfamily\bodyfont[]{Calibri}
+\newfontfamily\thinfont[]{Calibri}
+\newfontfamily\headingfont[]{Calibri}
 
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[Mapping=tex-text, Color=textcolor]{Arial}
